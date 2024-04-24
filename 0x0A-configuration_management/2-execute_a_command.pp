@@ -1,6 +1,5 @@
-#This code kills a process && works together with the killmenow file which has already been provided
-exe { killmenow':
-command		=>	'/usr/bin/pkill killmenow',
-provider	=>	'shell',
-return		=>	[0, 1],
+# Execute a command
+exe { 'pkill killmenow':
+	path => '/usr/bin:/usr/sbin:/bin'
 }
+
